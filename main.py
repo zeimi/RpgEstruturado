@@ -9,16 +9,17 @@ def main():
 # Variáveis do sistema:
 
 
-
 def inventario():
     print('nada')
 
 def menuPrincipal():
+    print('Olá. Bem vindo ao jogo.')
+    nome = input('Qual é o seu nome? -> ')
     os.system('cls||clear')
     escolha = int(input(
-    """
+    f"""
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    Menu principal
+    O que deseja, {nome}?
     Escolha uma das funções abaixo!
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     1 - Ir a loja
