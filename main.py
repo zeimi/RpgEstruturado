@@ -17,24 +17,14 @@ def choose_pokemon():
     while qnt!=0:
         os.system('cls||clear')
         print(f'Escolha {qnt} Pokémon')
-        print("1. Meowth")
-        print("2. Machamp")
-        print("3. Pidgeot")
-        print("4. Weezing")
-        print("5. Dugtrio")
-        print("6. Golem")
-        print("7. Butterfree")
-        print("8. Gengar")
-        print("9. Steelix")
-        print("10. Venusaur")
-        print("11. Charizard")
-        print("12. Blastoise")
-        print("13. Pikachu")
-        print("14. Alakazam")
-        print("15. Lapras")
-        print("16. Dragonite")
-        print("17. Umbreon")
-        print("18. Jigglypuff")
+        print("""
+        1. Meowth       7. Butterfree       13. Pikachu
+        2. Machamp      8. Gengar           14. Alakazam
+        3. Pidgeot      9. Steelix          15. Lapras
+        4. Weezing      10. Venusaur        16. Dragonite
+        5. Dugtrio      11. Charizard       17. Umbreon
+        6. Golem        12. Blastoise       18. Jigglypuff
+        """)
         player_pokemon = int(input("Digite o número do seu Pokémon: "))
         
         if player_pokemon == 1:
@@ -129,7 +119,7 @@ def choose_pokemon():
 
         else:
             print("Pokémon Inválido.")
-            choose_pokemon()
+            input('Aperte qualquer coisa para continuar:')
     return lista
 
 
@@ -156,20 +146,25 @@ def adversarios(time_pokemon):
         case 1:
             os.system('cls||clear')
             print('Função de enfrentar o Brock ainda não foi implementada.')
+            input('Aperte qualquer coisa para continuar:')
             adversarios(time_pokemon)
         case 2:
             os.system('cls||clear')
             print('Função de enfrentar a misty ainda não foi implementada.')
+            input('Aperte qualquer coisa para continuar:')
             adversarios(time_pokemon)
         case 3:
             os.system('cls||clear')
             print('Função de enfrentar o lt. surge ainda não foi implementada.')
+            input('Aperte qualquer coisa para continuar:')
             adversarios(time_pokemon)
         case 4:
             os.system('cls||clear')
-            print('Organizar por voltar.')
+            print('Voltar.')
+            input('Aperte qualquer coisa para continuar:')
             menuPrincipal(time_pokemon)
-    print('nada')
+
+
 
 def equipePokemon(time_pokemon):
     os.system('cls||clear')
@@ -180,8 +175,8 @@ def equipePokemon(time_pokemon):
                              a sua equipe?
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     1 - Organizar por força
-    2 - Organizar por tipo
-    3 - Organizar por nome
+    2 - Organizar por nome
+    3 - Organizar por Vida (Bubble sort)
     4 - Voltar
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Equipe atual: 
@@ -195,18 +190,43 @@ def equipePokemon(time_pokemon):
         case 1:
             os.system('cls||clear')
             print('Organizar por força.')
+            sorteio_forca = input('Deseja organizar por força de forma aleatória? (S/N)')
+            if sorteio_forca == 'S' or sorteio_forca == 's':
+                time_pokemon.sort(key=lambda x: x.force, reverse=True)
+                print('Organização por força realizada com sucesso.')
+            else:
+                print('Organização por força cancelada.')
+            input('Aperte qualquer coisa para continuar:')
             equipePokemon(time_pokemon)
         case 2:
             os.system('cls||clear')
-            print('Organizar por tipo.')
+            print('Organizar por nome.')
+            sorteio_nome = input("Deseja organizar por ordem alfabética? (S/N) ")
+            if sorteio_nome == "S" or sorteio_nome == "s":
+                time_pokemon.sort(key=lambda x: x.pokemon)
+                print("Organizado por ordem alfabética.")
+            else:
+                print("Organização cancelada.")
+            input('Aperte qualquer coisa para continuar:')
             equipePokemon(time_pokemon)
         case 3:
             os.system('cls||clear')
-            print('Organizar por nome.')
+            print('Organizar por Vida (Bubble sort).')
+            sorteio_bubble = input("Deseja organizar a equipe por vida no estilo bubble sorte? (S/N) ")
+            if sorteio_bubble == "S" or sorteio_bubble == "s":
+                for i in range(len(time_pokemon)):
+                    for j in range(len(time_pokemon)-1):
+                        if time_pokemon[j].health > time_pokemon[j+1].health:
+                            time_pokemon[j], time_pokemon[j+1] = time_pokemon[j+1], time_pokemon[j]
+                print("Organização realizada com sucesso.")
+            else:
+                print("Organização cancelada.")
+            input('Aperte qualquer coisa para continuar:')
             equipePokemon(time_pokemon)
         case 4:
             os.system('cls||clear')
             print('Voltar.')
+            input('Aperte qualquer coisa para continuar:')
             menuPrincipal(time_pokemon)
 
 def menuPrincipal(time_pokemon):
