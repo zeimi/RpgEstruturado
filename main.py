@@ -2,7 +2,9 @@ import os
 import time
 from classes import Pokemon
 
-def main():
+def main():    
+    global nome
+    nome = input('Qual é o seu nome? -> ')
     time_pokemon = choose_pokemon()
     menuPrincipal(time_pokemon)
 
@@ -131,13 +133,85 @@ def choose_pokemon():
     return lista
 
 
-def inventario():
+def adversarios(time_pokemon):
+    os.system('cls||clear')
+    escolha = int(input(
+    f"""
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                     {nome}, Escolha seu adversário:
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    1 - Brock
+    2 - Misty
+    3 - Lt. Surge
+    4 - Voltar
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    Equipe atual: 
+    1) Nome:{time_pokemon[0].pokemon}
+    2) Nome:{time_pokemon[1].pokemon}
+    3) Nome:{time_pokemon[2].pokemon} 
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    """
+    ))
+    match escolha:
+        case 1:
+            os.system('cls||clear')
+            print('Função de enfrentar o Brock ainda não foi implementada.')
+            adversarios(time_pokemon)
+        case 2:
+            os.system('cls||clear')
+            print('Função de enfrentar a misty ainda não foi implementada.')
+            adversarios(time_pokemon)
+        case 3:
+            os.system('cls||clear')
+            print('Função de enfrentar o lt. surge ainda não foi implementada.')
+            adversarios(time_pokemon)
+        case 4:
+            os.system('cls||clear')
+            print('Organizar por voltar.')
+            menuPrincipal(time_pokemon)
     print('nada')
+
+def equipePokemon(time_pokemon):
+    os.system('cls||clear')
+    escolha = int(input(
+    f"""
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                     {nome}, como deseja organizar
+                             a sua equipe?
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    1 - Organizar por força
+    2 - Organizar por tipo
+    3 - Organizar por nome
+    4 - Voltar
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    Equipe atual: 
+    1) Nome:{time_pokemon[0].pokemon}   Força:{time_pokemon[0].force}   Vida:{time_pokemon[0].health}   Tipo:{time_pokemon[0].type}
+    2) Nome:{time_pokemon[1].pokemon}   Força:{time_pokemon[1].force}   Vida:{time_pokemon[1].health}   Tipo:{time_pokemon[1].type}
+    3) Nome:{time_pokemon[2].pokemon}   Força:{time_pokemon[2].force}   Vida:{time_pokemon[2].health}   Tipo:{time_pokemon[2].type}
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    """
+    ))
+    match escolha:
+        case 1:
+            os.system('cls||clear')
+            print('Organizar por força.')
+            equipePokemon(time_pokemon)
+        case 2:
+            os.system('cls||clear')
+            print('Organizar por tipo.')
+            equipePokemon(time_pokemon)
+        case 3:
+            os.system('cls||clear')
+            print('Organizar por nome.')
+            equipePokemon(time_pokemon)
+        case 4:
+            os.system('cls||clear')
+            print('Voltar.')
+            menuPrincipal(time_pokemon)
 
 def menuPrincipal(time_pokemon):
     os.system('cls||clear')
     print('Olá. Bem vindo ao jogo.')
-    nome = input('Qual é o seu nome? -> ')
     os.system('cls||clear')
     escolha = int(input(
     f"""
@@ -145,45 +219,33 @@ def menuPrincipal(time_pokemon):
     O que deseja, {nome}?
     Escolha uma das funções abaixo!
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    1 - Ir a loja
-    2 - Habilidades
-    3 - Adversários
-    4 - Sair
+    1 - Adversários
+    2 - Equipe
+    3 - Sair
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Equipe atual: 
     1) {time_pokemon[0].pokemon}
     2) {time_pokemon[1].pokemon}
     3) {time_pokemon[2].pokemon}
+    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     """
     ))
     match escolha:
         case 1:
             os.system('cls||clear')
-            print('Escolheu Ir as compras.')
-            time.sleep(1)
-            print('.')
-            time.sleep(1)
-            print('..')
-            time.sleep(1)
-            print('...')
-            time.sleep(1)
-            os.system('cls||clear')
-        case 2:
-            os.system('cls||clear')
-            print('Escolheu Habilidades.')
-            input('Aperte qualquer coisa para continuar:')
-        case 3:
-            os.system('cls||clear')
             print('Escolheu Adversários.')
             input('Aperte qualquer coisa para continuar:')
-        case 4:
+            adversarios(time_pokemon)
+        case 2:
+            os.system('cls||clear')
+            print("Escolheu Equipe.")
+            input('Aperte qualquer coisa para continuar:')
+            equipePokemon(time_pokemon)
+            
+        case 3:
             os.system('cls||clear')
             print('Escolheu Sair.')
             input('Aperte qualquer coisa para continuar:')
-
-def equipamento():
-    print('nada')
-
 
 
 main()
