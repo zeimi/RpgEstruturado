@@ -1,6 +1,6 @@
 import os
 import time
-from classes import Pokemon
+from classes import Pokemon, Trainer
 
 def main():    
     global nome
@@ -103,7 +103,7 @@ def choose_pokemon():
             qnt-=1
 
         elif player_pokemon == 16:
-            player_pokemon3 = Pokemon("Dragonite", 30, 100, "Dragão")
+            player_pokemon3 = Pokemon("Dragonite", 30, 110, "Dragão")
             lista.append(player_pokemon3)
             qnt-=1
 
@@ -124,16 +124,16 @@ def choose_pokemon():
 
 
 def adversarios(time_pokemon):
+    lista = []
     os.system('cls||clear')
     escolha = int(input(
     f"""
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
                      {nome}, Escolha seu adversário:
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    1 - Brock
-    2 - Misty
-    3 - Lt. Surge
-    4 - Voltar
+    1 - Brock       4 - Sabrina     7 - Voltar
+    2 - Misty       5 - Giovanni
+    3 - Lt. Surge   6 - Lance
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Equipe atual: 
     1) Nome:{time_pokemon[0].pokemon}
@@ -145,24 +145,118 @@ def adversarios(time_pokemon):
     match escolha:
         case 1:
             os.system('cls||clear')
-            print('Função de enfrentar o Brock ainda não foi implementada.')
+            leader_pokemon1 = Pokemon("Onix", 10, 120, "Pedra")
+            leader_pokemon2 = Pokemon("Golem", 15, 120, "Pedra")
+            leader_pokemon3 = Pokemon("Rhydon", 10, 130, "Pedra")
+            lider = Trainer("Brock", "Pedra", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Boulder")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe do Brock: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
             input('Aperte qualquer coisa para continuar:')
             adversarios(time_pokemon)
         case 2:
             os.system('cls||clear')
-            print('Função de enfrentar a misty ainda não foi implementada.')
+            leader_pokemon1 = Pokemon("Golduck", 15, 100, "Água")
+            leader_pokemon2 = Pokemon("Starmie", 15, 110, "Água")
+            leader_pokemon3 = Pokemon("Gyarados", 20, 120, "Água")
+            lider = Trainer("Misty", "Água", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Cascade")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe da Misty: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
             input('Aperte qualquer coisa para continuar:')
             adversarios(time_pokemon)
         case 3:
             os.system('cls||clear')
-            print('Função de enfrentar o lt. surge ainda não foi implementada.')
+            leader_pokemon1 = Pokemon("Jolteon", 20, 100, "Elétrico")
+            leader_pokemon2 = Pokemon("Magneton", 10, 110, "Elétrico")
+            leader_pokemon3 = Pokemon("Raichu", 25, 90, "Elétrico")
+            lider = Trainer("Lt. Surge", "Elétrico", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Thunder")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe do Lt. Surge: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
             input('Aperte qualquer coisa para continuar:')
             adversarios(time_pokemon)
         case 4:
             os.system('cls||clear')
+            leader_pokemon1 = Pokemon("Mr. Mime", 20, 100, "Psíquico")
+            leader_pokemon2 = Pokemon("Hypno", 15, 110, "Psíquico")
+            leader_pokemon3 = Pokemon("Alakazam", 25, 90, "Psíquico")
+            lider = Trainer("Sabrina", "Psíquico", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Marsh")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe da Sabrina: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
+            input('Aperte qualquer coisa para continuar:')
+            adversarios(time_pokemon)
+        case 5:
+            os.system('cls||clear')
+            leader_pokemon1 = Pokemon("Dugtrio", 15, 110, "Terra")
+            leader_pokemon2 = Pokemon("Nidoqueen", 15, 110, "Terra")
+            leader_pokemon3 = Pokemon("Nidoking", 20, 120, "Terra")
+            lider = Trainer("Giovanni", "Terra", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Earth")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe do Giovanni: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
+            input('Aperte qualquer coisa para continuar:')
+            adversarios(time_pokemon)
+        case 6:
+            os.system('cls||clear')
+            leader_pokemon1 = Pokemon("Kingdra", 20, 100, "Dragão")
+            leader_pokemon2 = Pokemon("Dragonite", 30, 110, "Dragão")
+            leader_pokemon3 = Pokemon("Salamence", 35, 120, "Dragão")
+            lider = Trainer("Lance", "Dragão", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Champion")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe do Lance: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
+            input('Aperte qualquer coisa para continuar:')
+            adversarios(time_pokemon)
+        case 7:
+            os.system('cls||clear')
             print('Voltar.')
             input('Aperte qualquer coisa para continuar:')
             menuPrincipal(time_pokemon)
+    return time_lider
 
 
 
@@ -255,7 +349,8 @@ def menuPrincipal(time_pokemon):
             os.system('cls||clear')
             print('Escolheu Adversários.')
             input('Aperte qualquer coisa para continuar:')
-            adversarios(time_pokemon)
+            adversario = adversarios(time_pokemon)
+            print (adversario)
         case 2:
             os.system('cls||clear')
             print("Escolheu Equipe.")
@@ -266,6 +361,5 @@ def menuPrincipal(time_pokemon):
             os.system('cls||clear')
             print('Escolheu Sair.')
             input('Aperte qualquer coisa para continuar:')
-
 
 main()
