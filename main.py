@@ -369,7 +369,6 @@ def menuPrincipal(time_pokemon, time_lider):
             input('Aperte qualquer coisa para continuar:')
             exit()
 
-#function that runs a simple pokémon battle system
 def batalha(time_pokemon, time_lider):
     os.system('cls||clear')
     print(f"""
@@ -440,7 +439,48 @@ def batalha(time_pokemon, time_lider):
         time_lider[0].health = time_lider[0].maxhealth
         time_lider[1].health = time_lider[1].maxhealth
         time_lider[2].health = time_lider[2].maxhealth
-        input('Aperte qualquer coisa para continuar:')
+        if nome_lider == 'Brock, líder do tipo Pedra':
+            print(f"""
+                                    Brock venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+            Brock: Você batalhou bem. Mas a minha defesa de Pedra é invencível!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Misty, líder do tipo Água':
+            print(f"""
+                            Misty venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=
+            Misty: Viu? Essa é a força dos Pokémon de Água!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Lt. Surge, líder do tipo Elétrico':
+            print(f"""
+                                         Lt. Surge venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=
+            Lt. Surge: É isso aí! Quando o assunto é Pokémon Elétrico, eu sou o número 1!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Sabrina, líder do tipo Psíquico':
+            print(f"""
+                                Sabrina venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+            Sabrina: Essa vitória... foi exatamente como eu previ.
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Giovanni, líder do tipo Terra':
+            print(f"""
+                             Giovanni venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-
+            Giovanni: Eu espero que nos encontremos novamente...
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Lance, campeão de Kanto':
+            print(f"""
+                                    Lance venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            Lance: Eu nunca desisto. Meus dragões são criaturas lendárias!
+            """)
+            input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
 
     elif time_lider[0].health <= 0:
@@ -456,57 +496,58 @@ def batalha(time_pokemon, time_lider):
         time_lider[0].health = time_lider[0].maxhealth
         time_lider[1].health = time_lider[1].maxhealth
         time_lider[2].health = time_lider[2].maxhealth
-        if nome_lider == 'Brock':
+        if nome_lider == 'Brock, líder do tipo Pedra':
             print(f"""
-                Você venceu o Brock!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                     Você venceu o Brock!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
             Brock: Eu te subestimei. Você é um treinador muito bom. 
                     Aqui está a insígnia da Rocha!
             """)
             input('Aperte qualquer coisa para continuar:')
-        elif nome_lider == 'Misty':
+        elif nome_lider == 'Misty, líder do tipo Água':
             print(f"""
-                Você venceu a Misty!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                        Você venceu a Misty!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
             Misty: Uau! você é muito forte! Parabéns!
             Pode ficar com essa insígia da Cascata!
             """)
             input('Aperte qualquer coisa para continuar:')
-        elif nome_lider == 'Lt. Surge':
+        elif nome_lider == 'Lt. Surge, líder do tipo Elétrico':
             print(f"""
-                Você venceu o Lt. Surge!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                    Você venceu o Lt. Surge!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
             Lt. Surge: Nossa! você é pra valer, moleque!
             Tudo bem, tome essa insígnia do Trovão!
             """)
             input('Aperte qualquer coisa para continuar:')
-        elif nome_lider == 'Sabrina':
+        elif nome_lider == 'Sabrina, líder do tipo Psíquico':
             print(f"""
-                Você venceu a Sabrina!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                            Você venceu a Sabrina!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=
             Sabrina: Eu estou chocada! Mas uma derrota é uma derrota.
                     Você merece a insígnia do Espírito!
             """)
             input('Aperte qualquer coisa para continuar:')
-        elif nome_lider == 'Giovanni':
+        elif nome_lider == 'Giovanni, líder do tipo Terra':
             print(f"""
-                Você venceu o Giovanni!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                            Você venceu o Giovanni!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
             Giovanni: Ha! Essa foi uma batalha intensa! Você venceu!
                 Como prova, aqui está a insíquia da Terra!
             """)
             input('Aperte qualquer coisa para continuar:')
-        elif nome_lider == 'Lance':
+        elif nome_lider == 'Lance, campeão de Kanto':
             print(f"""
-                Você venceu o Lance!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                         Você venceu o Lance!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=
             Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
-                    Você agora é o Campeão de Kanto!
+                                    Você agora é o campeão de Kanto!
             """)
             input('Aperte qualquer coisa para continuar:')
             menuPrincipal(time_pokemon, time_lider)
         input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
+
 
 def trocarPokemon(time_pokemon, time_lider):
     os.system('cls||clear')
