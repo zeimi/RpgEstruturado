@@ -412,6 +412,7 @@ def batalha(time_pokemon, time_lider):
                 print(f"\n{time_lider[0].pokemon} perdeu {time_pokemon[0].force} de vida!\n")
                 time_lider[0].health -= time_pokemon[0].force
                 input('Aperte qualquer coisa para continuar:')
+                os.system('cls||clear')
                 print(f"{time_lider[0].pokemon} utilizou seu ataque do tipo {time_lider[0].type}!\n")
                 print(f"\n{time_pokemon[0].pokemon} perdeu {time_lider[0].force} de vida!\n")
                 time_pokemon[0].health -= time_lider[0].force
