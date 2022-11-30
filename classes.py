@@ -4,6 +4,7 @@ class Pokemon:
         self.force = force
         self.health = health
         self.type = type
+        self.maxhealth = health
     def __str__(self):
         return f"{self.pokemon} é do tipo {self.type} e tem {self.force} de força e {self.health} de vida."
 
