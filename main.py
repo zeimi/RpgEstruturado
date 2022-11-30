@@ -456,6 +456,55 @@ def batalha(time_pokemon, time_lider):
         time_lider[0].health = time_lider[0].maxhealth
         time_lider[1].health = time_lider[1].maxhealth
         time_lider[2].health = time_lider[2].maxhealth
+        if nome_lider == 'Brock':
+            print(f"""
+                Você venceu o Brock!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            Brock: Eu te subestimei. Você é um treinador muito bom. 
+                    Aqui está a insígnia da Rocha!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Misty':
+            print(f"""
+                Você venceu a Misty!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            Misty: Uau! você é muito forte! Parabéns!
+            Pode ficar com essa insígia da Cascata!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Lt. Surge':
+            print(f"""
+                Você venceu o Lt. Surge!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            Lt. Surge: Nossa! você é pra valer, moleque!
+            Tudo bem, tome essa insígnia do Trovão!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Sabrina':
+            print(f"""
+                Você venceu a Sabrina!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            Sabrina: Eu estou chocada! Mas uma derrota é uma derrota.
+                    Você merece a insígnia do Espírito!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Giovanni':
+            print(f"""
+                Você venceu o Giovanni!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            Giovanni: Ha! Essa foi uma batalha intensa! Você venceu!
+                Como prova, aqui está a insíquia da Terra!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Lance':
+            print(f"""
+                Você venceu o Lance!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
+                    Você agora é o Campeão de Kanto!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+            menuPrincipal(time_pokemon, time_lider)
         input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
 
