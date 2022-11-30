@@ -146,7 +146,7 @@ def adversarios(time_pokemon, time_lider):
     match escolha:
         case 1:
             os.system('cls||clear')
-            nome_lider = "Brock, líder de Pedra"
+            nome_lider = "Brock, líder do tipo Pedra"
             leader_pokemon1 = Pokemon("Onix", 10, 120, "Pedra")
             leader_pokemon2 = Pokemon("Golem", 15, 120, "Pedra")
             leader_pokemon3 = Pokemon("Rhydon", 10, 130, "Pedra")
@@ -165,7 +165,7 @@ def adversarios(time_pokemon, time_lider):
             batalha(time_pokemon, time_lider)
         case 2:
             os.system('cls||clear')
-            nome_lider = "Misty, líder de Água"
+            nome_lider = "Misty, líder do tipo Água"
             leader_pokemon1 = Pokemon("Golduck", 15, 100, "Água")
             leader_pokemon2 = Pokemon("Starmie", 15, 110, "Água")
             leader_pokemon3 = Pokemon("Gyarados", 20, 120, "Água")
@@ -184,7 +184,7 @@ def adversarios(time_pokemon, time_lider):
             batalha(time_pokemon, time_lider)
         case 3:
             os.system('cls||clear')
-            nome_lider = "Lt. Surge, líder de Elétrico"
+            nome_lider = "Lt. Surge, líder do tipo Elétrico"
             leader_pokemon1 = Pokemon("Jolteon", 20, 100, "Elétrico")
             leader_pokemon2 = Pokemon("Magneton", 10, 110, "Elétrico")
             leader_pokemon3 = Pokemon("Raichu", 25, 90, "Elétrico")
@@ -203,7 +203,7 @@ def adversarios(time_pokemon, time_lider):
             batalha(time_pokemon, time_lider)
         case 4:
             os.system('cls||clear')
-            nome_lider = "Sabrina, líder de Psíquico"
+            nome_lider = "Sabrina, líder do tipo Psíquico"
             leader_pokemon1 = Pokemon("Mr. Mime", 20, 100, "Psíquico")
             leader_pokemon2 = Pokemon("Hypno", 15, 110, "Psíquico")
             leader_pokemon3 = Pokemon("Alakazam", 25, 90, "Psíquico")
@@ -222,7 +222,7 @@ def adversarios(time_pokemon, time_lider):
             batalha(time_pokemon, time_lider)
         case 5:
             os.system('cls||clear')
-            nome_lider = "Giovanni, líder de Pedra"
+            nome_lider = "Giovanni, líder do tipo Terra"
             leader_pokemon1 = Pokemon("Dugtrio", 15, 110, "Terra")
             leader_pokemon2 = Pokemon("Nidoqueen", 15, 110, "Terra")
             leader_pokemon3 = Pokemon("Nidoking", 20, 120, "Terra")
@@ -242,9 +242,9 @@ def adversarios(time_pokemon, time_lider):
         case 6:
             os.system('cls||clear')
             nome_lider = "Lance, campeão de Kanto"
-            leader_pokemon1 = Pokemon("Kingdra", 20, 100, "Dragão")
-            leader_pokemon2 = Pokemon("Dragonite", 30, 110, "Dragão")
-            leader_pokemon3 = Pokemon("Salamence", 35, 120, "Dragão")
+            leader_pokemon1 = Pokemon("Charizard", 20, 100, "Fogo")
+            leader_pokemon2 = Pokemon("Aerodactyl", 30, 110, "Pedra")
+            leader_pokemon3 = Pokemon("Dragonite", 35, 120, "Dragão")
             lider = Trainer("Lance", "Dragão", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Champion")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
@@ -387,7 +387,7 @@ def batalha(time_pokemon, time_lider):
         """)
         print(f"""
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        {time_pokemon[0].pokemon} - Vida: {time_pokemon[0].health}
+        {time_pokemon[0].pokemon} - Vida: {time_pokemon[0].health} - Força: {time_pokemon[0].force}
         {time_lider[0].pokemon} - Vida: {time_lider[0].health}
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         """)
@@ -395,7 +395,7 @@ def batalha(time_pokemon, time_lider):
         f"""
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         O que deseja fazer, {nome}?
-        Escolha uma das funções abaixo!
+        Escolha uma das ações abaixo!
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         1 - Atacar
         2 - Trocar de Pokémon
