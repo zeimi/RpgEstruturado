@@ -150,7 +150,7 @@ def adversarios(time_pokemon, time_lider):
             leader_pokemon1 = Pokemon("Onix", 10, 120, "Pedra")
             leader_pokemon2 = Pokemon("Golem", 15, 120, "Pedra")
             leader_pokemon3 = Pokemon("Rhydon", 10, 130, "Pedra")
-            lider = Trainer("Brock", "Pedra", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Boulder")
+            lider = Trainer("Brock", "Pedra", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Rocha")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
             lista.append(leader_pokemon3)
@@ -169,7 +169,7 @@ def adversarios(time_pokemon, time_lider):
             leader_pokemon1 = Pokemon("Golduck", 15, 100, "Água")
             leader_pokemon2 = Pokemon("Starmie", 15, 110, "Água")
             leader_pokemon3 = Pokemon("Gyarados", 20, 120, "Água")
-            lider = Trainer("Misty", "Água", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Cascade")
+            lider = Trainer("Misty", "Água", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Cascata")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
             lista.append(leader_pokemon3)
@@ -188,7 +188,7 @@ def adversarios(time_pokemon, time_lider):
             leader_pokemon1 = Pokemon("Jolteon", 20, 100, "Elétrico")
             leader_pokemon2 = Pokemon("Magneton", 10, 110, "Elétrico")
             leader_pokemon3 = Pokemon("Raichu", 25, 90, "Elétrico")
-            lider = Trainer("Lt. Surge", "Elétrico", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Thunder")
+            lider = Trainer("Lt. Surge", "Elétrico", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Trovão")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
             lista.append(leader_pokemon3)
@@ -207,7 +207,7 @@ def adversarios(time_pokemon, time_lider):
             leader_pokemon1 = Pokemon("Mr. Mime", 20, 100, "Psíquico")
             leader_pokemon2 = Pokemon("Hypno", 15, 110, "Psíquico")
             leader_pokemon3 = Pokemon("Alakazam", 25, 90, "Psíquico")
-            lider = Trainer("Sabrina", "Psíquico", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Marsh")
+            lider = Trainer("Sabrina", "Psíquico", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Espírito")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
             lista.append(leader_pokemon3)
@@ -226,7 +226,7 @@ def adversarios(time_pokemon, time_lider):
             leader_pokemon1 = Pokemon("Dugtrio", 15, 110, "Terra")
             leader_pokemon2 = Pokemon("Nidoqueen", 15, 110, "Terra")
             leader_pokemon3 = Pokemon("Nidoking", 20, 120, "Terra")
-            lider = Trainer("Giovanni", "Terra", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Earth")
+            lider = Trainer("Giovanni", "Terra", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Terra")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
             lista.append(leader_pokemon3)
@@ -243,9 +243,9 @@ def adversarios(time_pokemon, time_lider):
             os.system('cls||clear')
             nome_lider = "Lance, campeão de Kanto"
             leader_pokemon1 = Pokemon("Charizard", 20, 100, "Fogo")
-            leader_pokemon2 = Pokemon("Aerodactyl", 30, 110, "Pedra")
+            leader_pokemon2 = Pokemon("Aerodactyl", 30, 110, "Voador")
             leader_pokemon3 = Pokemon("Dragonite", 35, 120, "Dragão")
-            lider = Trainer("Lance", "Dragão", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Champion")
+            lider = Trainer("Lance", "Dragão", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Campeão")
             lista.append(leader_pokemon1)
             lista.append(leader_pokemon2)
             lista.append(leader_pokemon3)
@@ -313,7 +313,7 @@ def equipePokemon(time_pokemon, time_lider):
         case 3:
             os.system('cls||clear')
             print('Organizar por Vida (Bubble sort).')
-            sorteio_bubble = input("Deseja organizar a equipe por vida no estilo bubble sorte? (S/N) ")
+            sorteio_bubble = input("Deseja organizar a equipe por vida no estilo bubble sort? (S/N) ")
             if sorteio_bubble == "S" or sorteio_bubble == "s":
                 for i in range(len(time_pokemon)):
                     for j in range(len(time_pokemon)-1):
@@ -446,7 +446,7 @@ def batalha(time_pokemon, time_lider):
         time_lider[2].health = time_lider[2].maxhealth
         if nome_lider == 'Brock, líder do tipo Pedra':
             print(f"""
-                                    Brock venceu!
+                                     Brock venceu!
             -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
             Brock: Você batalhou bem. Mas a minha defesa de Pedra é invencível!
             """)
@@ -503,7 +503,7 @@ def batalha(time_pokemon, time_lider):
         time_lider[2].health = time_lider[2].maxhealth
         if nome_lider == 'Brock, líder do tipo Pedra':
             print(f"""
-                     Você venceu o Brock!
+                            Você venceu o Brock!
             -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
             Brock: Eu te subestimei. Você é um treinador muito bom. 
                     Aqui está a insígnia da Rocha!
@@ -543,7 +543,7 @@ def batalha(time_pokemon, time_lider):
             input('Aperte qualquer coisa para continuar:')
         elif nome_lider == 'Lance, campeão de Kanto':
             print(f"""
-                                         Você venceu o Lance!
+                                        Você venceu o Lance!
             -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=
             Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
                                     Você agora é o campeão de Kanto!
