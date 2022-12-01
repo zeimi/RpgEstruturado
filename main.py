@@ -377,8 +377,10 @@ def batalha(time_pokemon, time_lider):
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     """)
     input('Aperte qualquer coisa para continuar:')
+    
     while time_pokemon[0].health > 0 and time_lider[0].health > 0:
         os.system('cls||clear')
+        
         print(f"""
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         {time_pokemon[0].pokemon} vs {time_lider[0].pokemon}
@@ -387,7 +389,7 @@ def batalha(time_pokemon, time_lider):
         print(f"""
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         {time_pokemon[0].pokemon} - Vida: {time_pokemon[0].health} - Força: {time_pokemon[0].force}
-        {time_lider[0].pokemon} - Vida: {time_lider[0].health}
+        {time_lider[0].pokemon} - Vida: {time_lider[0].health} - Força: {time_lider[0].force}
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         """)
         escolha = int(input(
@@ -426,7 +428,8 @@ def batalha(time_pokemon, time_lider):
                 print('Escolheu Fugir.')
                 input('Aperte qualquer coisa para continuar:')
                 menuPrincipal(time_pokemon, time_lider)
-    if time_pokemon[0].health <= 0:
+
+    if time_pokemon[0].health <= 0 and time_pokemon[1].health <= 0 and time_pokemon[2].health <= 0:
         os.system('cls||clear')
         print(f"""
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -483,7 +486,7 @@ def batalha(time_pokemon, time_lider):
             input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
 
-    elif time_lider[0].health <= 0:
+    elif time_lider[0].health <= 0 and time_lider[1].health <= 0 and time_lider[2].health <= 0:
         os.system('cls||clear')
         print(f"""
         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -548,6 +551,14 @@ def batalha(time_pokemon, time_lider):
         input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
 
+    # Quando o pokémon morrer, troca para o seguinte
+    elif time_pokemon[0].health <= 0:
+        time_pokemon[0], time_pokemon[1], time_pokemon[2] = time_pokemon[2], time_pokemon[1], time_pokemon[0]
+        batalha(time_pokemon, time_lider)
+    elif time_lider[0].health <= 0:
+        time_lider[0], time_lider[1], time_lider[2] = time_lider[2], time_lider[1], time_lider[0]
+        batalha(time_pokemon, time_lider)
+
 
 def trocarPokemon(time_pokemon, time_lider):
     os.system('cls||clear')
@@ -577,23 +588,40 @@ def trocarPokemon(time_pokemon, time_lider):
             input('Aperte qualquer coisa para continuar:')
         case 2:
             os.system('cls||clear')
-            print(f"""
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            Você escolheu {time_pokemon[1].pokemon}
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            """)
-            input('Aperte qualquer coisa para continuar:')
-            time_pokemon[0], time_pokemon[1] = time_pokemon[1], time_pokemon[0]
-            time_pokemon[0].health -= time_lider[0].force
+            if time_pokemon[1].health <= 0:
+                print(f"""
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                {time_pokemon[1].pokemon} está desmaiado!
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                """)
+                input('Aperte qualquer coisa para continuar:')
+            else:
+                print(f"""
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                Você escolheu {time_pokemon[1].pokemon}
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                """)
+                input('Aperte qualquer coisa para continuar:')
+                time_pokemon[0], time_pokemon[1] = time_pokemon[1], time_pokemon[0]
+                time_pokemon[0].health -= time_lider[0].force
         case 3:
-            os.system('cls||clear')
-            print(f"""
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            Você escolheu {time_pokemon[2].pokemon}
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            """)
-            input('Aperte qualquer coisa para continuar:')
-            time_pokemon[0], time_pokemon[2] = time_pokemon[2], time_pokemon[0]
-            time_pokemon[0].health -= time_lider[0].force
+            if time_pokemon[2].health <= 0:
+                os.system('cls||clear')
+                print(f"""
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                {time_pokemon[2].pokemon} está desmaiado!
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                """)
+                input('Aperte qualquer coisa para continuar:')
+            else:
+                os.system('cls||clear')
+                print(f"""
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                Você escolheu {time_pokemon[2].pokemon}
+                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                """)
+                input('Aperte qualquer coisa para continuar:')
+                time_pokemon[0], time_pokemon[2] = time_pokemon[2], time_pokemon[0]
+                time_pokemon[0].health -= time_lider[0].force
 
 main(time_lider=adversarios)
