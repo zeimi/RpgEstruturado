@@ -553,10 +553,10 @@ def batalha(time_pokemon, time_lider):
 
     # Quando o pokémon morrer, troca para o seguinte
     elif time_pokemon[0].health <= 0:
-        time_pokemon[0], time_pokemon[1], time_pokemon[2] = time_pokemon[2], time_pokemon[1], time_pokemon[0]
+        time_pokemon[0], time_pokemon[1], time_pokemon[2] = time_pokemon[1], time_pokemon[2], time_pokemon[0]
         batalha(time_pokemon, time_lider)
     elif time_lider[0].health <= 0:
-        time_lider[0], time_lider[1], time_lider[2] = time_lider[2], time_lider[1], time_lider[0]
+        time_lider[0], time_lider[1], time_lider[2] = time_lider[1], time_lider[2], time_lider[0]
         batalha(time_pokemon, time_lider)
 
 
