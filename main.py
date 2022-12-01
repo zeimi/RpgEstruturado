@@ -132,9 +132,9 @@ def adversarios(time_pokemon, time_lider):
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
                      {nome}, Escolha seu adversário:
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    1 - Brock       4 - Sabrina     7 - Voltar
-    2 - Misty       5 - Giovanni
-    3 - Lt. Surge   6 - Lance
+    1 - Brock       4 - Sabrina     7 - Pescador Danilo
+    2 - Misty       5 - Giovanni    8 - Manoel Gomes
+    3 - Lt. Surge   6 - Lance       9 - Voltar
     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     Equipe atual: 
     1) Nome:{time_pokemon[0].pokemon}
@@ -259,6 +259,44 @@ def adversarios(time_pokemon, time_lider):
             input('Aperte qualquer coisa para continuar:')
             batalha(time_pokemon, time_lider)
         case 7:
+            os.system('cls||clear')
+            nome_lider = "Pescador Danilo"
+            leader_pokemon1 = Pokemon("Magikarp", 5, 10, "Água")
+            leader_pokemon2 = Pokemon("Magikarp", 5, 10, "Água")
+            leader_pokemon3 = Pokemon("Magikarp", 5, 10, "Água")
+            lider = Trainer("Pescador Danilo", "Poggers", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Froggers")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe de Danilo: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
+            input('Aperte qualquer coisa para continuar:')
+            batalha(time_pokemon, time_lider)
+        case 8:
+            os.system('cls||clear')
+            nome_lider = "Manoel Gomes, o homem da Caneta Azul"
+            leader_pokemon1 = Pokemon("Dialga", 35, 150, "Dragão")
+            leader_pokemon2 = Pokemon("Palkia", 35, 150, "Dragão")
+            leader_pokemon3 = Pokemon("Arceus", 50, 200, "Divino")
+            lider = Trainer("Manoel Gomes", "Divino", leader_pokemon1, leader_pokemon2, leader_pokemon3, "Caneta")
+            lista.append(leader_pokemon1)
+            lista.append(leader_pokemon2)
+            lista.append(leader_pokemon3)
+            time_lider = lista
+            print (f"""Equipe do Caneta Azul: 
+            1) Nome:{time_lider[0].pokemon}
+            2) Nome:{time_lider[1].pokemon}
+            3) Nome:{time_lider[2].pokemon}
+            """
+            )
+            input('Aperte qualquer coisa para continuar:')
+            batalha(time_pokemon, time_lider)
+        case 9:
             os.system('cls||clear')
             print('Voltar.')
             input('Aperte qualquer coisa para continuar:')
@@ -486,6 +524,20 @@ def batalha(time_pokemon, time_lider):
             Lance: Eu nunca desisto. Meus dragões são criaturas lendárias!
             """)
             input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Pescador Danilo':
+            print(f"""
+                                        Pescador Danilo venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+            Pescador Danilo: Ganhei! Agora dá licença que eu tenho que estudar o complemento de 2.
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Manoel Gomes, o homem da Caneta Azul':
+            print(f"""
+                                        Manoel Gomes venceu!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-
+            Manoel Gomes: Caneta azul, azul caneta, caneta azul, está marcada com minha letra...
+            """)
+            input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
 
     elif time_lider[0].health <= 0 and time_lider[1].health <= 0 and time_lider[2].health <= 0:
@@ -550,6 +602,20 @@ def batalha(time_pokemon, time_lider):
             """)
             input('Aperte qualquer coisa para continuar:')
             menuPrincipal(time_pokemon, time_lider)
+        elif nome_lider == 'Pescador Danilo':
+            print(f"""
+                            Você venceu do Pescador Danilo!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+               Pescador Danilo: Peraí mãe, que esse Pokémon não sabe nem batalhar!
+            """)
+            input('Aperte qualquer coisa para continuar:')
+        elif nome_lider == 'Manoel Gomes, o homem da Caneta Azul':
+            print(f"""
+                        Você venceu do Manuel Gomes!
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=
+                      Ai... Ai... Ai... Ai... Ai...
+            """)
+            input('Aperte qualquer coisa para continuar:')
         input('Aperte qualquer coisa para continuar:')
         menuPrincipal(time_pokemon, time_lider)
 
