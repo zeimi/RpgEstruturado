@@ -4,7 +4,17 @@ from classes import Pokemon, Trainer
 
 def main(time_lider):    
     global nome
-    nome = input('Qual é o seu nome? -> ')
+    nome = input("""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                Bem vindo ao mundo de Pokémon!
+                Qual é o seu nome? -> """)
+    os.system('cls||clear')
+    input (f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                                Olá, {nome}!
+    Você é um treinador Pokémon e seu objetivo é se tornar o melhor treinador do mundo!
+            Aperte qualquer coisa para escolher seu pokémon logo em seguida.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=""")
     time_pokemon = choose_pokemon()
     menuPrincipal(time_pokemon, time_lider)
 
@@ -16,15 +26,17 @@ def choose_pokemon():
     qnt=3
     while qnt!=0:
         os.system('cls||clear')
-        print(f'Escolha {qnt} Pokémon')
-        print("""
-        1. Meowth       7. Butterfree       13. Pikachu
-        2. Machamp      8. Gengar           14. Alakazam
-        3. Pidgeot      9. Steelix          15. Lapras
-        4. Weezing      10. Venusaur        16. Dragonite
-        5. Dugtrio      11. Charizard       17. Umbreon
-        6. Golem        12. Blastoise       18. Jigglypuff
-        """)
+        print(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        Escolha {qnt} Pokémon para formar a sua equipe:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    1. Meowth       7. Butterfree       13. Pikachu
+    2. Machamp      8. Gengar           14. Alakazam
+    3. Pidgeot      9. Steelix          15. Lapras
+    4. Weezing      10. Venusaur        16. Dragonite
+    5. Dugtrio      11. Charizard       17. Umbreon
+    6. Golem        12. Blastoise       18. Jigglypuff
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
         player_pokemon = int(input("Digite o número do seu Pokémon: "))
         
         if player_pokemon == 1:
@@ -119,7 +131,7 @@ def choose_pokemon():
 
         else:
             print("Pokémon Inválido.")
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para escolher novamente:')
     return lista
 
 
@@ -129,20 +141,19 @@ def adversarios(time_pokemon, time_lider):
     os.system('cls||clear')
     escolha = int(input(
     f"""
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                     {nome}, Escolha seu adversário:
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                {nome}, Escolha seu adversário:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     1 - Brock       4 - Sabrina     7 - Pescador Danilo
     2 - Misty       5 - Giovanni    8 - Manoel Gomes
     3 - Lt. Surge   6 - Lance       9 - Voltar
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    Equipe atual: 
-    1) Nome:{time_pokemon[0].pokemon}
-    2) Nome:{time_pokemon[1].pokemon}
-    3) Nome:{time_pokemon[2].pokemon} 
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    """
-    ))
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Equipe atual: 
+1) Nome:{time_pokemon[0].pokemon}
+2) Nome:{time_pokemon[1].pokemon}
+3) Nome:{time_pokemon[2].pokemon} 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Escolha:"""))
     match escolha:
         case 1:
             os.system('cls||clear')
@@ -156,12 +167,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe do Brock: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 2:
             os.system('cls||clear')
@@ -175,12 +184,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe da Misty: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 3:
             os.system('cls||clear')
@@ -194,12 +201,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe do Lt. Surge: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 4:
             os.system('cls||clear')
@@ -213,12 +218,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe da Sabrina: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 5:
             os.system('cls||clear')
@@ -232,12 +235,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe do Giovanni: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 6:
             os.system('cls||clear')
@@ -251,12 +252,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe do Lance: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 7:
             os.system('cls||clear')
@@ -270,12 +269,10 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe de Danilo: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 8:
             os.system('cls||clear')
@@ -289,17 +286,15 @@ def adversarios(time_pokemon, time_lider):
             lista.append(leader_pokemon3)
             time_lider = lista
             print (f"""Equipe do Caneta Azul: 
-            1) Nome:{time_lider[0].pokemon}
-            2) Nome:{time_lider[1].pokemon}
-            3) Nome:{time_lider[2].pokemon}
-            """
-            )
-            input('Aperte qualquer coisa para continuar:')
+1) Nome:{time_lider[0].pokemon}
+2) Nome:{time_lider[1].pokemon}
+3) Nome:{time_lider[2].pokemon}""")
+            input('Aperte qualquer coisa para proceder:')
             batalha(time_pokemon, time_lider)
         case 9:
             os.system('cls||clear')
             print('Voltar.')
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para voltar ao menu principal:')
             menuPrincipal(time_pokemon, time_lider)
     return time_lider
 
@@ -307,24 +302,22 @@ def adversarios(time_pokemon, time_lider):
 
 def equipePokemon(time_pokemon, time_lider):
     os.system('cls||clear')
-    escolha = int(input(
-    f"""
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                     {nome}, como deseja organizar
-                             a sua equipe?
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    1 - Organizar por força
-    2 - Organizar por nome
-    3 - Organizar por Vida (Bubble sort)
-    4 - Voltar
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    Equipe atual: 
-    1) Nome:{time_pokemon[0].pokemon}   Força:{time_pokemon[0].force}   Vida:{time_pokemon[0].health}   Tipo:{time_pokemon[0].type}
-    2) Nome:{time_pokemon[1].pokemon}   Força:{time_pokemon[1].force}   Vida:{time_pokemon[1].health}   Tipo:{time_pokemon[1].type}
-    3) Nome:{time_pokemon[2].pokemon}   Força:{time_pokemon[2].force}   Vida:{time_pokemon[2].health}   Tipo:{time_pokemon[2].type}
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    """
-    ))
+    escolha = int(input(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        {nome}, como deseja organizar
+                a sua equipe?
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+1 - Organizar por força
+2 - Organizar por nome
+3 - Organizar por Vida (Bubble sort)
+4 - Voltar
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Equipe atual: 
+1) Nome:{time_pokemon[0].pokemon}   Força:{time_pokemon[0].force}   Vida:{time_pokemon[0].health}   Tipo:{time_pokemon[0].type}
+2) Nome:{time_pokemon[1].pokemon}   Força:{time_pokemon[1].force}   Vida:{time_pokemon[1].health}   Tipo:{time_pokemon[1].type}
+3) Nome:{time_pokemon[2].pokemon}   Força:{time_pokemon[2].force}   Vida:{time_pokemon[2].health}   Tipo:{time_pokemon[2].type}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Escolha:"""))
     match escolha:
         case 1:
             os.system('cls||clear')
@@ -335,7 +328,7 @@ def equipePokemon(time_pokemon, time_lider):
                 print('Organização por força realizada com sucesso.')
             else:
                 print('Organização por força cancelada.')
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para voltar ao menu de organização:')
             equipePokemon(time_pokemon, time_lider)
         case 2:
             os.system('cls||clear')
@@ -343,10 +336,10 @@ def equipePokemon(time_pokemon, time_lider):
             sorteio_nome = input("Deseja organizar por ordem alfabética? (S/N) ")
             if sorteio_nome == "S" or sorteio_nome == "s":
                 time_pokemon.sort(key=lambda x: x.pokemon)
-                print("Organizado por ordem alfabética.")
+                print("Organização por nome realizada com sucesso.")
             else:
-                print("Organização cancelada.")
-            input('Aperte qualquer coisa para continuar:')
+                print("Organização por nome cancelada.")
+            input('Aperte qualquer coisa para voltar ao menu de organização:')
             equipePokemon(time_pokemon, time_lider)
         case 3:
             os.system('cls||clear')
@@ -357,125 +350,114 @@ def equipePokemon(time_pokemon, time_lider):
                     for j in range(len(time_pokemon)-1):
                         if time_pokemon[j].health > time_pokemon[j+1].health:
                             time_pokemon[j], time_pokemon[j+1] = time_pokemon[j+1], time_pokemon[j]
-                print("Organização realizada com sucesso.")
+                print("Organização por vida realizada com sucesso.")
             else:
-                print("Organização cancelada.")
-            input('Aperte qualquer coisa para continuar:')
+                print("Organização por vida cancelada.")
+            input('Aperte qualquer coisa para voltar ao menu de organização:')
             equipePokemon(time_pokemon, time_lider)
         case 4:
             os.system('cls||clear')
             print('Voltar.')
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para voltar ao menu principal:')
             menuPrincipal(time_pokemon, time_lider)
 
 def menuPrincipal(time_pokemon, time_lider):
     os.system('cls||clear')
-    print('Olá. Bem vindo ao jogo.')
-    os.system('cls||clear')
-    escolha = int(input(
-    f"""
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    O que deseja, {nome}?
-    Escolha uma das funções abaixo!
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    1 - Adversários
-    2 - Equipe
-    3 - Sair
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    Equipe atual: 
-    1) {time_pokemon[0].pokemon}
-    2) {time_pokemon[1].pokemon}
-    3) {time_pokemon[2].pokemon}
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    """
-    ))
+    escolha = int(input(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        Menu principal:
+{nome}, o que deseja fazer?
+Escolha uma das funções abaixo!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+1 - Adversários
+2 - Equipe
+3 - Sair
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Equipe atual: 
+1) {time_pokemon[0].pokemon}
+2) {time_pokemon[1].pokemon}
+3) {time_pokemon[2].pokemon}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Escolha:"""))
     match escolha:
         case 1:
             os.system('cls||clear')
             print('Escolheu Adversários.')
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para seguir ao menu de adversários:')
             adversario = adversarios(time_pokemon, time_lider)
         case 2:
             os.system('cls||clear')
             print("Escolheu Equipe.")
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para seguir ao menu de equipe:')
             equipePokemon(time_pokemon, time_lider)
             
         case 3:
             os.system('cls||clear')
             print('Escolheu Sair.')
-            input('Aperte qualquer coisa para continuar:')
+            input('Aperte qualquer coisa para sair do jogo:')
             exit()
 
 def batalha(time_pokemon, time_lider):
     os.system('cls||clear')
-    print(f"""
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    Batalha entre {nome} e {nome_lider}
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    """)
-    input('Aperte qualquer coisa para continuar:')
-    
+    if time_pokemon[2].health > 0 and time_lider[2].health > 0:
+        print(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Batalha entre {nome} e {nome_lider}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
+        input('Aperte qualquer coisa para iniciar a batalha:')
+        
     while time_pokemon[0].health > 0 and time_lider[0].health > 0:
         os.system('cls||clear')
         
-        print(f"""
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        {time_pokemon[0].pokemon} vs {time_lider[0].pokemon}
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        """)
-        print(f"""
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        {time_pokemon[0].pokemon} - Vida: {time_pokemon[0].health} - Força: {time_pokemon[0].force}
-        {time_lider[0].pokemon} - Vida: {time_lider[0].health} - Força: {time_lider[0].force}
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        """)
-        escolha = int(input(
-        f"""
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        O que deseja fazer, {nome}?
-        Escolha uma das ações abaixo!
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        1 - Atacar
-        2 - Trocar de Pokémon
-        3 - Fugir
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        """
-        ))
+        print(f"""-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+{time_pokemon[0].pokemon} vs {time_lider[0].pokemon}""")
+        print(f"""-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+{time_pokemon[0].pokemon} - Vida: {time_pokemon[0].health} - Força: {time_pokemon[0].force}
+{time_lider[0].pokemon} - Vida: {time_lider[0].health} - Força: {time_lider[0].force}""")
+        escolha = int(input(f"""-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+O que deseja fazer, {nome}?
+Escolha uma das ações abaixo!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+1 - Atacar
+2 - Trocar de Pokémon
+3 - Fugir
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Escolha: """))
         match escolha:
             case 1:
                 os.system('cls||clear')
                 danodado = time_pokemon[0].force * Pokemon.attackDict[time_pokemon[0].type][time_lider[0].type]
                 danorecebido = time_lider[0].force * Pokemon.attackDict[time_lider[0].type][time_pokemon[0].type]
                 print('Escolheu Atacar.')
-                input('Aperte qualquer coisa para continuar:')
-                print(f"{time_pokemon[0].pokemon} utilizou seu ataque do tipo {time_pokemon[0].type}!\n")
-                time_lider[0].health -= danodado
-                print(f"\n{time_lider[0].pokemon} perdeu {danodado} de vida!\n")
-                input('Aperte qualquer coisa para continuar:')
+                input('Aperte qualquer coisa para realizar o ataque:')
                 os.system('cls||clear')
-                print(f"{time_lider[0].pokemon} utilizou seu ataque do tipo {time_lider[0].type}!\n")
+                print(f"{time_pokemon[0].pokemon} utilizou seu ataque do tipo {time_pokemon[0].type}!")
+                time_lider[0].health -= danodado
+                print(f"{time_lider[0].pokemon} perdeu {danodado} de vida!")
+                print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=')
+                print(f"{time_lider[0].pokemon} utilizou seu ataque do tipo {time_lider[0].type}!")
                 time_pokemon[0].health -= danorecebido
-                print(f"\n{time_pokemon[0].pokemon} perdeu {danorecebido} de vida!\n")
-                input('Aperte qualquer coisa para continuar:')
+                print(f"{time_pokemon[0].pokemon} perdeu {danorecebido} de vida!")
+                print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=')
+                input('Aperte qualquer coisa para voltar ao menu de batalha:')
             case 2:
                 os.system('cls||clear')
                 print('Escolheu Trocar de Pokémon.')
-                input('Aperte qualquer coisa para continuar:')
+                input('Aperte qualquer coisa para voltar ao menu de batalha:')
                 trocarPokemon(time_pokemon, time_lider)
             case 3:
                 os.system('cls||clear')
                 print('Escolheu Fugir.')
-                input('Aperte qualquer coisa para continuar:')
+                input('Aperte qualquer coisa para voltar ao menu principal:')
                 menuPrincipal(time_pokemon, time_lider)
 
     if time_pokemon[0].health <= 0 and time_pokemon[1].health <= 0 and time_pokemon[2].health <= 0:
         os.system('cls||clear')
-        print(f"""
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            Você perdeu a batalha.
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        """)
+        input(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        Você perdeu a batalha.
+Aperte qualquer coisa para continuar...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
         time_pokemon[0].health = time_pokemon[0].maxhealth
         time_pokemon[1].health = time_pokemon[1].maxhealth
         time_pokemon[2].health = time_pokemon[2].maxhealth
@@ -483,70 +465,86 @@ def batalha(time_pokemon, time_lider):
         time_lider[1].health = time_lider[1].maxhealth
         time_lider[2].health = time_lider[2].maxhealth
         if nome_lider == 'Brock, líder do tipo Pedra':
+            os.system('cls||clear')
             print(f"""
-                                     Brock venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
-            Brock: Você batalhou bem. Mas a minha defesa de Pedra é invencível!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+                        Brock venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+Brock: Você batalhou bem. Mas a minha defesa de Pedra é invencível!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Misty, líder do tipo Água':
+            os.system('cls||clear')
             print(f"""
-                            Misty venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=
-            Misty: Viu? Essa é a força dos Pokémon de Água!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+                         Misty venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+        Misty: Viu? Essa é a força dos Pokémon de Água!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Lt. Surge, líder do tipo Elétrico':
+            os.system('cls||clear')
             print(f"""
-                                         Lt. Surge venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=
-            Lt. Surge: É isso aí! Quando o assunto é Pokémon Elétrico, eu sou o número 1!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
+                            Lt. Surge venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
+Lt. Surge: É isso aí! Quando o assunto é Pokémon Elétrico, eu sou o número 1!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Sabrina, líder do tipo Psíquico':
+            os.system('cls||clear')
             print(f"""
-                                Sabrina venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
-            Sabrina: Essa vitória... foi exatamente como eu previ.
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+                        Sabrina venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+        Sabrina: Essa vitória... foi exatamente como eu previ.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Giovanni, líder do tipo Terra':
+            os.system('cls||clear')
             print(f"""
-                             Giovanni venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-
-            Giovanni: Eu espero que nos encontremos novamente...
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+                        Giovanni venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+        Giovanni: Eu espero que nos encontremos novamente...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Lance, campeão de Kanto':
+            os.system('cls||clear')
             print(f"""
-                                    Lance venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-            Lance: Eu nunca desisto. Meus dragões são criaturas lendárias!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-
+                            Lance venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Lance: Eu nunca desisto. Meus dragões são criaturas lendárias!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Pescador Danilo':
+            os.system('cls||clear')
             print(f"""
-                                        Pescador Danilo venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-            Pescador Danilo: Ganhei! Agora dá licença que eu tenho que estudar o complemento de 2.
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-
+                                Pescador Danilo venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Pescador Danilo: Ganhei! Agora dá licença que eu tenho que estudar o complemento de 2.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Manoel Gomes, o homem da Caneta Azul':
+            os.system('cls||clear')
             print(f"""
-                                        Manoel Gomes venceu!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-
-            Manoel Gomes: Caneta azul, azul caneta, caneta azul, está marcada com minha letra...
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=
+                                Manoel Gomes venceu!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-
+Manoel Gomes: Caneta azul, azul caneta, caneta azul, está marcada com minha letra...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         menuPrincipal(time_pokemon, time_lider)
 
     elif time_lider[0].health <= 0 and time_lider[1].health <= 0 and time_lider[2].health <= 0:
         os.system('cls||clear')
-        print(f"""
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            Você venceu a batalha!
-        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        """)
+        input(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+        Você venceu a batalha!
+Aperte qualquer coisa para continuar...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=""")
         time_pokemon[0].health = time_pokemon[0].maxhealth
         time_pokemon[1].health = time_pokemon[1].maxhealth
         time_pokemon[2].health = time_pokemon[2].maxhealth
@@ -554,121 +552,136 @@ def batalha(time_pokemon, time_lider):
         time_lider[1].health = time_lider[1].maxhealth
         time_lider[2].health = time_lider[2].maxhealth
         if nome_lider == 'Brock, líder do tipo Pedra':
+            os.system('cls||clear')
             print(f"""
-                            Você venceu o Brock!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
-            Brock: Eu te subestimei. Você é um treinador muito bom. 
-                    Aqui está a insígnia da Rocha!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+                Você venceu o Brock!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+Brock: Eu te subestimei. Você é um treinador muito bom. 
+        Aqui está a insígnia da Rocha!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Misty, líder do tipo Água':
+            os.system('cls||clear')
             print(f"""
-                        Você venceu a Misty!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-            Misty: Uau! você é muito forte! Parabéns!
-            Pode ficar com essa insígia da Cascata!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+                Você venceu a Misty!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+        Misty: Uau! você é muito forte! Parabéns!
+        Pode ficar com essa insígia da Cascata!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Lt. Surge, líder do tipo Elétrico':
+            os.system('cls||clear')
             print(f"""
-                    Você venceu o Lt. Surge!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
-            Lt. Surge: Nossa! você é pra valer, moleque!
-            Tudo bem, tome essa insígnia do Trovão!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+             Você venceu o Lt. Surge!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+    Lt. Surge: Nossa! você é pra valer, moleque!
+        Tudo bem, tome essa insígnia do Trovão!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Sabrina, líder do tipo Psíquico':
+            os.system('cls||clear')
             print(f"""
-                            Você venceu a Sabrina!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=
-            Sabrina: Eu estou chocada! Mas uma derrota é uma derrota.
-                    Você merece a insígnia do Espírito!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+                Você venceu a Sabrina!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+Sabrina: Eu estou chocada! Mas uma derrota é uma derrota.
+        Você merece a insígnia do Espírito!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Giovanni, líder do tipo Terra':
+            os.system('cls||clear')
             print(f"""
-                            Você venceu o Giovanni!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
-            Giovanni: Ha! Essa foi uma batalha intensa! Você venceu!
-                Como prova, aqui está a insíquia da Terra!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+                Você venceu o Giovanni!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+Giovanni: Ha! Essa foi uma batalha intensa! Você venceu!
+        Como prova, aqui está a insíquia da Terra!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Lance, campeão de Kanto':
+            os.system('cls||clear')
             print(f"""
-                                        Você venceu o Lance!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=
-            Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
-                                    Você agora é o campeão de Kanto!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                        Você venceu o Lance!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
+                    Você agora é o campeão de Kanto!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
             menuPrincipal(time_pokemon, time_lider)
         elif nome_lider == 'Pescador Danilo':
+            os.system('cls||clear')
             print(f"""
-                            Você venceu do Pescador Danilo!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-               Pescador Danilo: Peraí mãe, que esse Pokémon não sabe nem batalhar!
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=
+                    Você venceu do Pescador Danilo!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Pescador Danilo: Peraí mãe, que esse Pokémon não sabe nem batalhar!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Manoel Gomes, o homem da Caneta Azul':
+            os.system('cls||clear')
             print(f"""
-                        Você venceu do Manuel Gomes!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=
-                      Ai... Ai... Ai... Ai... Ai...
-            """)
-            input('Aperte qualquer coisa para continuar:')
-        input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+            Você venceu do Manuel Gomes!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
+            Ai... Ai... Ai... Ai... Ai...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+            input('Aperte qualquer coisa para voltar ao menu principal:')
         menuPrincipal(time_pokemon, time_lider)
 
     # Quando o pokémon morrer, troca para o seguinte
     elif time_pokemon[0].health <= 0:
+        os.system('cls||clear')
+        print('Seu Pokémon foi derrotado!')
         time_pokemon[0], time_pokemon[1], time_pokemon[2] = time_pokemon[1], time_pokemon[2], time_pokemon[0]
+        input('Aperte qualquer coisa para o próximo entrar em campo:')
         batalha(time_pokemon, time_lider)
     elif time_lider[0].health <= 0:
+        os.system('cls||clear')
+        print('O pokémon do líder foi derrotado!')
         time_lider[0], time_lider[1], time_lider[2] = time_lider[1], time_lider[2], time_lider[0]
+        input('Aperte qualquer coisa para enfrentar o próximo Pokémon:')
         batalha(time_pokemon, time_lider)
 
 
 def trocarPokemon(time_pokemon, time_lider):
     os.system('cls||clear')
     print(f"""
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-          Trocar de Pokémon
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    """)
-    escolha = int(input(
-    f"""
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    Escolha um dos seus pokémons para trocar.
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    1) {time_pokemon[0].pokemon}
-    2) {time_pokemon[1].pokemon}
-    3) {time_pokemon[2].pokemon}
-    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    """))
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Trocar de Pokémon""")
+    escolha = int(input(f"""
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Escolha um dos seus pokémons para trocar.
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+1) {time_pokemon[0].pokemon}
+2) {time_pokemon[1].pokemon}
+3) {time_pokemon[2].pokemon}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Escolha: """))
     match escolha:
         case 1:
             os.system('cls||clear')
             print(f"""
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            {time_pokemon[0].pokemon} já está em batalha!
-            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-            """)
-            input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+{time_pokemon[0].pokemon} já está em batalha!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
+            input('Aperte qualquer coisa para voltar:')
         case 2:
             os.system('cls||clear')
             if time_pokemon[1].health <= 0:
                 print(f"""
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                {time_pokemon[1].pokemon} está desmaiado!
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                """)
-                input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+{time_pokemon[1].pokemon} está desmaiado!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
+                input('Aperte qualquer coisa para voltar:')
             else:
                 print(f"""
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                Você escolheu {time_pokemon[1].pokemon}
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                """)
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Você escolheu {time_pokemon[1].pokemon}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
                 input('Aperte qualquer coisa para continuar:')
                 time_pokemon[0], time_pokemon[1] = time_pokemon[1], time_pokemon[0]
                 time_pokemon[0].health -= time_lider[0].force
@@ -676,18 +689,16 @@ def trocarPokemon(time_pokemon, time_lider):
             if time_pokemon[2].health <= 0:
                 os.system('cls||clear')
                 print(f"""
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                {time_pokemon[2].pokemon} está desmaiado!
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                """)
-                input('Aperte qualquer coisa para continuar:')
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+{time_pokemon[2].pokemon} está desmaiado!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
+                input('Aperte qualquer coisa para voltar:')
             else:
                 os.system('cls||clear')
                 print(f"""
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                Você escolheu {time_pokemon[2].pokemon}
-                -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                """)
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Você escolheu {time_pokemon[2].pokemon}
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
                 input('Aperte qualquer coisa para continuar:')
                 time_pokemon[0], time_pokemon[2] = time_pokemon[2], time_pokemon[0]
                 time_pokemon[0].health -= time_lider[0].force
