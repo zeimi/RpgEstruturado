@@ -371,7 +371,8 @@ Escolha uma das funções abaixo!
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 1 - Adversários
 2 - Equipe
-3 - Sair
+3 - Regras
+4 - Sair
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Equipe atual: 
 1) {time_pokemon[0].pokemon}
@@ -390,8 +391,24 @@ Escolha:"""))
             print("Escolheu Equipe.")
             input('Aperte qualquer coisa para seguir ao menu de equipe:')
             equipePokemon(time_pokemon, time_lider)
-            
+
         case 3:
+            os.system('cls||clear')
+            input("""-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Regras:
+1 - O jogo consiste em uma batalha entre dois times de três pokémons.
+2 - Os pokémon possuem vida, força e tipo.
+3 - A vida é o valor de vida do pokémon, quando chega a 0, o pokémon é derrotado.
+4 - A força é o valor de ataque do pokémon, quando o pokémon ataca, ele causa dano igual a sua força.
+5 - Ao trocar de pokémon, seu próximo pokémon a entrar em campo recebe o dano da rodada.
+6 - O tipo é o tipo do pokémon, que pode ser fogo, água ou grama.
+7 - Os pokémon tem multiplicadores de dano baseado em tipo, por exemplo:
+    O pokémon do tipo água causa dano 2x maior no pokémon do tipo fogo.
+8 - Se divirta e boa sorte! 
+                (APERTE QUALQUER COISA PARA VOLTAR AO MENU PRINCIPAL)
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-""")
+            menuPrincipal(time_pokemon, time_lider)    
+        case 4:
             os.system('cls||clear')
             print('Escolheu Sair.')
             input('Aperte qualquer coisa para sair do jogo:')
