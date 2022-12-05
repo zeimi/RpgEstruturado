@@ -129,6 +129,21 @@ def choose_pokemon():
             lista.append(player_pokemon3)
             qnt-=1
 
+        elif player_pokemon == 150:
+            player_pokemon3 = Pokemon("Mewtwo", 40, 140, "Psíquico")
+            lista.append(player_pokemon3)
+            qnt-=1
+
+        elif player_pokemon == 129:
+            player_pokemon3 = Pokemon("Magikarp", 5, 10, "Água")
+            lista.append(player_pokemon3)
+            qnt-=1
+
+        elif player_pokemon == 493:
+            player_pokemon3 = Pokemon("Arceus", 50, 200, "Divino")
+            lista.append(player_pokemon3)
+            qnt-=1
+
         else:
             print("Pokémon Inválido.")
             input('Aperte qualquer coisa para escolher novamente:')
@@ -542,7 +557,11 @@ Lt. Surge: É isso aí! Quando o assunto é Pokémon Elétrico, eu sou o número
                                 Pescador Danilo venceu!
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Pescador Danilo: Ganhei! Agora dá licença que eu tenho que estudar o complemento de 2.
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-""")
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-
+                Vocẽ perdeu para o treinador mais fraco do jogo! (???)
+        Na seleção de pokémon, use o número "129" para usar o Magikarp! Boa sorte!"
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-
+""")
             input('Aperte qualquer coisa para voltar ao menu principal:')
         elif nome_lider == 'Manoel Gomes, o homem da Caneta Azul':
             os.system('cls||clear')
@@ -621,12 +640,14 @@ Giovanni: Ha! Essa foi uma batalha intensa! Você venceu!
         elif nome_lider == 'Lance, campeão de Kanto':
             os.system('cls||clear')
             print(f"""
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-                        Você venceu o Lance!
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
-                    Você agora é o campeão de Kanto!
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=""")
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                                    Você venceu o Lance!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+        Lance: É isso! Não queria admitir, mas você é o melhor treinador que eu já vi!
+                            Você agora é o campeão de Kanto!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Obrigado por jogar! Na seleção de pokémon, tente usar o número "150" para ter uma surpresa!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=""")
             input('Aperte qualquer coisa para voltar ao menu principal:')
             menuPrincipal(time_pokemon, time_lider)
         elif nome_lider == 'Pescador Danilo':
@@ -641,11 +662,15 @@ Pescador Danilo: Peraí mãe, que esse Pokémon não sabe nem batalhar!
         elif nome_lider == 'Manoel Gomes, o homem da Caneta Azul':
             os.system('cls||clear')
             print(f"""
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
-            Você venceu do Manuel Gomes!
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=
-            Ai... Ai... Ai... Ai... Ai...
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=""")
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                    Você venceu do Manoel Gomes!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                    Ai... Ai... Ai... Ai... Ai...
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Você venceu dos Deuses do mundo real e pokémon (De alguma forma)! 
+Na seleção de pokémon, use o número "493" para usar o Arceus!
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+""")
             input('Aperte qualquer coisa para voltar ao menu principal:')
         menuPrincipal(time_pokemon, time_lider)
 
