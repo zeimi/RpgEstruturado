@@ -36,7 +36,7 @@ Python 3.11.0 ou a ultima versão
 
 <h3 align="center">
    
-[![linkimgyoutube](https://cdn.discordapp.com/attachments/1014906729714159696/1049072242908201020/wallpaperflare.com_wallpaper_4.jpg)](https://www.youtube.com/watch?v=d40lFR22Q6Q)
+[![linkimgyoutube](https://cdn.discordapp.com/attachments/1014906729714159696/1049072242908201020/wallpaperflare.com_wallpaper_4.jpg)](https://www.youtube.com/watch?v=jB3XEbnRJoM)
   
   </h3>
   
